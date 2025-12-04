@@ -164,6 +164,170 @@
   .line-reveal:hover::after {
     width: 100%;
   }
+
+  /* Ink blob styles */
+  .ink-blob {
+    background: hsl(var(--foreground));
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    filter: blur(40px);
+  }
+
+  .ink-blob-1 {
+    animation: inkMorph1 20s ease-in-out infinite, inkFloat1 15s ease-in-out infinite;
+  }
+
+  .ink-blob-2 {
+    animation: inkMorph2 25s ease-in-out infinite, inkFloat2 18s ease-in-out infinite;
+  }
+
+  .ink-blob-3 {
+    animation: inkMorph3 18s ease-in-out infinite, inkFloat3 12s ease-in-out infinite;
+  }
+
+  /* Ink drops */
+  .ink-drop {
+    background: hsl(var(--foreground));
+    border-radius: 50%;
+    filter: blur(1px);
+  }
+
+  .ink-drop-1 {
+    animation: inkDropFloat 8s ease-in-out infinite;
+  }
+
+  .ink-drop-2 {
+    animation: inkDropFloat 10s ease-in-out infinite reverse;
+  }
+
+  .ink-drop-3 {
+    animation: inkDropFloat 7s ease-in-out infinite;
+    animation-delay: 2s;
+  }
+
+  .ink-drop-4 {
+    animation: inkDropFloat 12s ease-in-out infinite reverse;
+    animation-delay: 4s;
+  }
+
+  /* Ink splatters */
+  .ink-splatter-1 {
+    animation: inkSplatter 15s ease-in-out infinite;
+  }
+
+  .ink-splatter-2 {
+    animation: inkSplatter 20s ease-in-out infinite reverse;
+  }
+}
+
+/* Ink morphing animations */
+@keyframes inkMorph1 {
+  0%, 100% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    transform: rotate(0deg) scale(1);
+  }
+  25% {
+    border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+  }
+  50% {
+    border-radius: 50% 60% 30% 60% / 30% 40% 70% 50%;
+    transform: rotate(90deg) scale(1.1);
+  }
+  75% {
+    border-radius: 40% 30% 60% 50% / 60% 50% 40% 30%;
+  }
+}
+
+@keyframes inkMorph2 {
+  0%, 100% {
+    border-radius: 40% 60% 60% 40% / 60% 40% 60% 40%;
+    transform: rotate(0deg) scale(1);
+  }
+  33% {
+    border-radius: 60% 40% 40% 60% / 40% 60% 40% 60%;
+    transform: rotate(60deg) scale(0.95);
+  }
+  66% {
+    border-radius: 50% 50% 60% 40% / 50% 40% 60% 50%;
+    transform: rotate(120deg) scale(1.05);
+  }
+}
+
+@keyframes inkMorph3 {
+  0%, 100% {
+    border-radius: 70% 30% 50% 50% / 30% 50% 50% 70%;
+    transform: scale(1);
+  }
+  50% {
+    border-radius: 30% 70% 50% 50% / 50% 50% 70% 30%;
+    transform: scale(1.15);
+  }
+}
+
+/* Floating animations */
+@keyframes inkFloat1 {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(-20px, 30px);
+  }
+  50% {
+    transform: translate(10px, -20px);
+  }
+  75% {
+    transform: translate(-30px, -10px);
+  }
+}
+
+@keyframes inkFloat2 {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  33% {
+    transform: translate(40px, -30px);
+  }
+  66% {
+    transform: translate(-20px, 20px);
+  }
+}
+
+@keyframes inkFloat3 {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(-40px, 30px);
+  }
+}
+
+@keyframes inkDropFloat {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.08;
+  }
+  25% {
+    transform: translate(10px, -15px) scale(1.2);
+    opacity: 0.05;
+  }
+  50% {
+    transform: translate(-5px, 10px) scale(0.8);
+    opacity: 0.1;
+  }
+  75% {
+    transform: translate(15px, 5px) scale(1.1);
+    opacity: 0.06;
+  }
+}
+
+@keyframes inkSplatter {
+  0%, 100% {
+    transform: rotate(0deg) scale(1);
+    opacity: 0.03;
+  }
+  50% {
+    transform: rotate(10deg) scale(1.1);
+    opacity: 0.05;
+  }
 }
 
 @keyframes fadeUp {

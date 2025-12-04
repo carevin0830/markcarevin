@@ -6,18 +6,22 @@ import Projects from '@/components/Projects';
 import Education from '@/components/Education';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
+import InkBackground from '@/components/InkBackground';
 
 const Index = () => {
   return (
-    <main className="min-h-screen bg-background">
-      <Navigation />
-      <Hero />
-      <About />
-      <Skills />
-      <Projects />
-      <Education />
-      <Contact />
-      <Footer />
+    <main className="min-h-screen bg-background relative">
+      <InkBackground />
+      <div className="relative z-10">
+        <Navigation />
+        <Hero />
+        <About />
+        <Skills />
+        <Projects />
+        <Education />
+        <Contact />
+        <Footer />
+      </div>
     </main>
   );
 };
