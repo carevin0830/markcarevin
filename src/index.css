@@ -217,6 +217,159 @@
   .ink-splatter-2 {
     animation: inkSplatter 20s ease-in-out infinite reverse;
   }
+
+  /* Ink drips */
+  .ink-drip {
+    width: 3px;
+    height: 0;
+    background: linear-gradient(
+      to bottom,
+      hsl(var(--foreground)) 0%,
+      hsl(var(--foreground) / 0.8) 60%,
+      hsl(var(--foreground) / 0.3) 90%,
+      transparent 100%
+    );
+    border-radius: 0 0 50% 50%;
+    opacity: 0.08;
+  }
+
+  .ink-drip::after {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 6px;
+    height: 6px;
+    background: hsl(var(--foreground));
+    border-radius: 50%;
+    opacity: 0.9;
+  }
+
+  .ink-drip-1 {
+    animation: inkDrip 8s ease-in infinite;
+    animation-delay: 0s;
+  }
+
+  .ink-drip-2 {
+    animation: inkDrip 10s ease-in infinite;
+    animation-delay: 2s;
+  }
+
+  .ink-drip-3 {
+    animation: inkDrip 7s ease-in infinite;
+    animation-delay: 4s;
+  }
+
+  .ink-drip-4 {
+    animation: inkDrip 9s ease-in infinite;
+    animation-delay: 1s;
+  }
+
+  .ink-drip-5 {
+    animation: inkDrip 11s ease-in infinite;
+    animation-delay: 3s;
+  }
+
+  .ink-drip-6 {
+    animation: inkDrip 8s ease-in infinite;
+    animation-delay: 5s;
+  }
+
+  /* Thin drips */
+  .ink-drip-thin {
+    width: 1px;
+    height: 0;
+    background: linear-gradient(
+      to bottom,
+      hsl(var(--foreground)) 0%,
+      hsl(var(--foreground) / 0.5) 70%,
+      transparent 100%
+    );
+    opacity: 0.06;
+  }
+
+  .ink-drip-thin::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 3px;
+    height: 3px;
+    background: hsl(var(--foreground));
+    border-radius: 50%;
+    opacity: 0.8;
+  }
+
+  .ink-drip-thin-1 {
+    animation: inkDripThin 12s ease-in infinite;
+    animation-delay: 1s;
+  }
+
+  .ink-drip-thin-2 {
+    animation: inkDripThin 9s ease-in infinite;
+    animation-delay: 3s;
+  }
+
+  .ink-drip-thin-3 {
+    animation: inkDripThin 14s ease-in infinite;
+    animation-delay: 0s;
+  }
+
+  .ink-drip-thin-4 {
+    animation: inkDripThin 10s ease-in infinite;
+    animation-delay: 5s;
+  }
+
+  .ink-drip-thin-5 {
+    animation: inkDripThin 11s ease-in infinite;
+    animation-delay: 2s;
+  }
+}
+
+@keyframes inkDrip {
+  0% {
+    height: 0;
+    opacity: 0;
+  }
+  5% {
+    opacity: 0.08;
+  }
+  60% {
+    height: 150px;
+    opacity: 0.08;
+  }
+  80% {
+    height: 200px;
+    opacity: 0.04;
+  }
+  100% {
+    height: 250px;
+    opacity: 0;
+  }
+}
+
+@keyframes inkDripThin {
+  0% {
+    height: 0;
+    opacity: 0;
+  }
+  5% {
+    opacity: 0.06;
+  }
+  50% {
+    height: 100px;
+    opacity: 0.06;
+  }
+  75% {
+    height: 180px;
+    opacity: 0.03;
+  }
+  100% {
+    height: 220px;
+    opacity: 0;
+  }
 }
 
 /* Ink morphing animations */

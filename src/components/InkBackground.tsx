@@ -16,6 +16,21 @@ const InkBackground = () => {
       <div className="ink-drop ink-drop-3 absolute top-1/3 right-1/4 w-2 h-2 opacity-[0.07]" />
       <div className="ink-drop ink-drop-4 absolute bottom-1/4 left-1/3 w-5 h-5 opacity-[0.05]" />
       
+      {/* Ink drips from top */}
+      <div className="ink-drip ink-drip-1 absolute top-0 left-[10%]" />
+      <div className="ink-drip ink-drip-2 absolute top-0 left-[25%]" />
+      <div className="ink-drip ink-drip-3 absolute top-0 left-[45%]" />
+      <div className="ink-drip ink-drip-4 absolute top-0 left-[60%]" />
+      <div className="ink-drip ink-drip-5 absolute top-0 left-[75%]" />
+      <div className="ink-drip ink-drip-6 absolute top-0 left-[90%]" />
+      
+      {/* Secondary thinner drips */}
+      <div className="ink-drip-thin ink-drip-thin-1 absolute top-0 left-[15%]" />
+      <div className="ink-drip-thin ink-drip-thin-2 absolute top-0 left-[35%]" />
+      <div className="ink-drip-thin ink-drip-thin-3 absolute top-0 left-[55%]" />
+      <div className="ink-drip-thin ink-drip-thin-4 absolute top-0 left-[70%]" />
+      <div className="ink-drip-thin ink-drip-thin-5 absolute top-0 left-[85%]" />
+      
       {/* Ink splatter lines */}
       <svg className="absolute top-20 left-10 w-32 h-32 opacity-[0.03] ink-splatter-1" viewBox="0 0 100 100">
         <path
