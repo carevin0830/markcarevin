@@ -1,9 +1,21 @@
+import profileImage from '@/assets/profile.jpg';
+
 const About = () => {
   return (
     <section id="about" className="py-24 bg-secondary/50">
       <div className="container mx-auto px-6">
         <div className="max-w-4xl mx-auto">
           <div className="grid md:grid-cols-2 gap-16 items-center">
+            <div className="space-y-6">
+              <div className="relative w-64 h-64 mx-auto md:mx-0">
+                <div className="absolute inset-0 border border-border -translate-x-3 -translate-y-3" />
+                <img 
+                  src={profileImage} 
+                  alt="Mark Carevin Daluson" 
+                  className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500"
+                />
+              </div>
+            </div>
             <div>
               <p className="text-sm font-sans tracking-[0.3em] uppercase text-muted-foreground mb-4">
                 About Me
